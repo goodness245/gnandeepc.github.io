@@ -6,6 +6,18 @@ function setup() {
     circleDiameter = width/NUM_CIRCLES;
 }
 function draw() {
+    var y = 0;
+    while (y <= height) {
+        
+    var x = 0;
+    while(x <= width) {
+        ellipse(x, 0, circleDiameter, circleDiameter);
+        x = x + circleDiameter;
+    }
+    
+    y = y + circleDiameter;
+    }
+}
     ellipse(0, height/2, circleDiameter, circleDiameter);
     ellipse(circleDiameter, height/2, circleDiameter, circleDiameter);
     ellipse(2*circleDiameter, height/2, circleDiameter, circleDiameter);
@@ -19,4 +31,3 @@ function draw() {
     ellipse(10*circleDiameter, height/2, circleDiameter, circleDiameter);
     ellipse(11*circleDiameter, height/2, circleDiameter, circleDiameter);
     ellipse(12*circleDiameter, height/2, circleDiameter, circleDiameter);
-}
