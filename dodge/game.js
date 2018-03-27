@@ -4,6 +4,7 @@
  var enemy;
  var enemyImage;
  var backgroundImage;
+ var score;
 
  function preload() {
    playerImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/N5uCbDu.png");
@@ -11,7 +12,7 @@
    backgroundImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
  }
  function setup() {
-     createCanvas(256,256);
+     createCanvas(300,300);
      isGameOver = false;
      player = createSprite(width/2, height- (playerImage.height/2), 0, 0);
      player.addImage(playerImage);
@@ -38,6 +39,14 @@
      player.position.x -= 2;
    }
    
+   if(keyDown(UP_ARROW) && player.position.y < (height - (playerImage.height/2))) {
+     player.position.y -= 2;
+    }
+    
+   if(keyDown(DOWN_ARROW) && player.position.y > (playerImage.height/2)) {
+     player.position.y += 2;
+    }
+    
    enemy.position.y = enemy.position.y + 3;
    
    if (enemy.position.y > height) {
@@ -63,4 +72,21 @@
      enemy.position.y = 0;
    }
  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
